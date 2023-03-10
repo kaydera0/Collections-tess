@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_gravity="center"
+            android:layout_width="645dp"
+            android:gravity="center"
+            android:layout_height="76dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/hint_main_fragment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutMapSize"
+            android:layout_gravity="center"
+            android:layout_width="651dp"
+            android:layout_height="83dp"
+            android:layout_marginTop="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/red"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintTextColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/textView21">
+
+            <EditText
+                android:id="@+id/collectionSize"
+                android:layout_width="651dp"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:hint="@string/collection_size"
+                android:inputType="number"
+                android:padding="30dp"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_gravity="center"
+            android:layout_width="656dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/orange"
+            android:text="calculate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutMapSize" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>

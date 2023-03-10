@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">task 3</string>
+    <string name="Activity">Activity</string>
+    <string name="Collections_and_Maps">Collections &amp; Maps</string>
+    <string name="Collections">Collections</string>
+    <string name="Maps">Maps</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="elements_amount">Elements amount:</string>
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+    <string name="collection_size">Collection size</string>
+    <string name="hint_main_fragment">Please enter collection size and number of elements to compare</string>
+    <string name="not_calculated_result">N/A ms</string>
+    <string name="adding_beginning">adding in the beginning</string>
+    <string name="adding_middle">adding in the middle</string>
+    <string name="adding_end">adding in the end</string>
+    <string name="search">search by value</string>
+    <string name="remove_begin">removing in the beginning</string>
+    <string name="remove_middle">removing in the middle</string>
+    <string name="remove_end">removing in the end</string>
+    <string name="text_input_error">Error.You need enter elements count.</string>
+    <string-array name="map_operations">
+        <item> "add new"</item>
+        <item> "search by key"</item>
+        <item> "removing"</item>
+    </string-array>
+    <string-array name="collection_operations">
+        <item> "adding in the beginning"</item>
+        <item> "adding in the middle"</item>
+        <item> "adding in the end"</item>
+        <item> "search by value"</item>
+        <item> "removing in the beginning"</item>
+        <item> "removing in the middle"</item>
+        <item> "removing in the end</item>
+    </string-array>
+
+</resources>

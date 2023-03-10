@@ -1,0 +1,120 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 33
+    dexOptions {
+        javaMaxHeapSize "4G"
+    }
+
+    defaultConfig {
+        applicationId "com.example.task3"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+        viewBinding.enabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+    packagingOptions {
+        exclude("META-INF/LICENSE.md")
+        exclude("META-INF/LICENSE-notice.md")
+    }
+
+}
+
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.fragment:fragment:1.6.0-alpha04'
+    implementation 'androidx.fragment:fragment-ktx:1.5.5'
+    implementation'androidx.activity:activity-ktx:1.6.1'
+    implementation('org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4')
+    implementation "androidx.core:core-ktx:1.9.0"
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+
+    // Koin Core features
+    implementation 'io.insert-koin:koin-core:3.3.2'
+// Koin Test features
+    testImplementation 'io.insert-koin:koin-test:3.3.2'
+
+// Koin for JUnit 4
+    testImplementation 'io.insert-koin:koin-test-junit4:3.3.2'
+// Koin for JUnit 5
+    testImplementation 'io.insert-koin:koin-test-junit5:3.3.2'
+//mockito
+    testImplementation 'org.mockito:mockito-core:4.11.0'
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0"
+    testImplementation 'org.mockito:mockito-core:4.11.0'
+    testImplementation 'org.powermock:powermock-module-junit4-rule:2.0.9'
+    testImplementation 'org.powermock:powermock-core:2.0.9'
+    testImplementation 'org.powermock:powermock-module-junit4:2.0.9'
+    testImplementation 'org.powermock:powermock-api-mockito2:2.0.9'
+
+    testImplementation "org.hamcrest:hamcrest:2.2"
+    testImplementation "androidx.test.ext:junit-ktx:1.1.5"
+    testImplementation "androidx.test:core-ktx:1.5.0"
+    testImplementation "org.robolectric:robolectric:4.9"
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+
+    // Koin main features for Android
+    implementation 'io.insert-koin:koin-android:3.3.2'
+// Java Compatibility
+    implementation 'io.insert-koin:koin-android-compat:3.3.2'
+// Jetpack WorkManager
+    implementation 'io.insert-koin:koin-androidx-workmanager:3.3.2'
+// Navigation Graph
+    implementation 'io.insert-koin:koin-androidx-navigation:3.3.2'
+
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'androidx.test:runner:1.5.1'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+    testImplementation 'org.mockito:mockito-inline:2.8.47'
+
+    // For espresso test cases
+    androidTestImplementation ('com.android.support.test.espresso:espresso-core:3.0.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+// For recycler view actions
+    androidTestImplementation ('com.android.support.test.espresso:espresso-contrib:3.0.2') {
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude module: 'recyclerview-v7'
+    }
+
+// For espresso activity rule
+    androidTestImplementation "com.android.support.test:rules:1.0.2"
+    androidTestImplementation "com.android.support.test:runner:1.0.2"
+//mockk
+    testImplementation "io.mockk:mockk:1.13.3"
+    androidTestImplementation "io.mockk:mockk-android:1.13.3"
+
+}
